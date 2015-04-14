@@ -1,1 +1,16 @@
-<h1>hello world Let's go!2</h1>
+<h1>hello world Let's go!4</h1>
+
+<table>
+    <tr>
+        <td>NAME</td><td>COMPUTER</td><td>SPEED</td>
+    </tr>
+    <% @temp.each do |i| %>
+        <tr><td><%= i %></td><td><%= i + 1 %></td><td><%= i + 2  %></td></tr>
+    <% end %>
+</table>
+
+
+<%= @p %>
+<%= @s1 %>
+<%= @s2 %>
+<%= @s3 %>
