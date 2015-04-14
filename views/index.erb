@@ -1,4 +1,4 @@
-<h1>hello world Let's go!4</h1>
+<h1>!!!!!!!!!!PRIME TIME!!!!!!!</h1>
 
 <table>
     <tr>
@@ -8,6 +8,13 @@
         <tr><td><%= i %></td><td><%= i + 1 %></td><td><%= i + 2  %></td></tr>
     <% end %>
 </table>
+
+<form action="/speeds/<%= @speed.id %>/delete" method="post">
+  <input type="hidden" name="_method" value="'delete"/>
+  <button>delete</button>
+</form>
+
+<a href="/speeds/new">New Speed test</a>
 
 
 <%= @p %>

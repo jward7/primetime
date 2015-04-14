@@ -1,0 +1,8 @@
+<h2>Edit Speed Test</h2>
+
+<form action="/speed/<% @speeds.id %>" method="post">
+  <input type="hidden" name="_method" value="put"/>
+  <label for="">name</label>
+  <input type="text" name="name" value="<%= @speeds.speed_c %>"/>
+  <button>update</button>
+</form>

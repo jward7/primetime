@@ -3,6 +3,9 @@ require 'sinatra/reloader'
 require 'pg' #for postgresql database
 require 'pry'
 require 'sinatra/form_helpers'
+#require 'bcrypt'
+
+#enable :sessions
 
 require_relative 'config'
 require_relative 'computer'
@@ -10,8 +13,12 @@ require_relative 'prime'
 require_relative 'speed'
 require_relative 'database'
 
-Database.clear_tables
-Database.seed
+before do
+  Database.clear_tables
+  Database.seed
+
+  #@speeds = Speed.all    # todo keep dry by removing duplication below. Need to test after removing items below.
+end
 
 # root route
 get '/' do
@@ -27,6 +34,83 @@ get '/' do
 end
 
 # make 5 RESTFUL routes
+# display speed test
+get '/speeds' do
+  @speeds = Speed.all
+
+  erb :index
+end
+
+# the next two routes work as a pair to display a create new item and then submit the new item
+
+# new speed test  - part 1
+get 'speeds/new' do
+  erb :new
+end
+
+# new speed test -part 2 todo not tested yet.
+post '/speeds' do
+  speed = Speed.new
+  speed.speed_c = params[:speed]
+  if speed.save
+    redirect to '/'
+  else
+    erb :new
+  end
+end
+
+# the next two routes work as a pair to display an edit form and submit edits
+
+# show edit form
+get 'speeds/:id/edit' do
+  @speeds = Speed.find(params[:id])      # get the first value. Find is specific. Where is flexible
+
+  erb :edit
+end
+
+# update existing speed test
+put 'speeds/:id' do
+  edit_speed = Speed.find(params[:id])
+  edit_speed.speed_c = params[:speed]
+  edit_speed.save
+
+  redirect to '/'
+end
+
+# delete existing speed test. Should work as an extension of edit, but with post button
+delete 'speeds/:id' do
+  edit_speed = Speed.find(params[:id])
+  edit_speed.delete    # only need to save when you are modifying the object.
+
+  redirect to '/'
+end
+
+# JSON API
+
+get '/api/speeds' do
+  content_type :json
+  Speed.all.to_json
+end
+
+post '/api/speeds' do
+  speed = Speed.new
+  speed.speed_c = params[:result]
+  speed.save
+
+  content_type :json
+  post.to_json
+end
+
+
+
+
+
+
+
+
+
+
+
 
 
 
