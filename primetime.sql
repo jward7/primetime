@@ -14,7 +14,7 @@ CREATE TABLE primes (
   id BIGSERIAL PRIMARY KEY,
   prime_c BIGINT,
   prime_text VARCHAR(100),
-  type VARCHAR(50),
+  type_of VARCHAR(50), /*cannot use type as variable name -changed to type_of*/
   found TIMESTAMP
 );
 
