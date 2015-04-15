@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="1536961600">
+    <data-source source="LOCAL" name="PostgreSQL - primetime@localhost" uuid="3c428209-5328-4d79-a952-467ab50924bd">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/primetime</jdbc-url>
+      <libraries />
+    </data-source>
+  </component>
+</project>

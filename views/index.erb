@@ -1,23 +1,28 @@
-<h1>!!!!!!!!!!PRIME TIME!!!!!!!</h1>
+<h2>Top 5</h2>
 
 <table>
     <tr>
         <td>NAME</td><td>COMPUTER</td><td>SPEED</td>
     </tr>
-    <% @temp.each do |i| %>
-        <tr><td><%= i %></td><td><%= i + 1 %></td><td><%= i + 2  %></td></tr>
+    <% @speed.each do |s| %>
+        <tr>
+          <td><%= s.person %></td><td><%= s.computer_id %></td><td><%= s.speed_c  %></td>
+          <td>
+            <form action="/speeds/<%= s.id %>/delete" method="post">
+                <input type="hidden" name="_method" value="'delete"/>
+                <button>delete</button>
+            </form>
+          </td>
+          <td>
+            <form action="/speeds/<%= s.id %>/edit" method="put">
+              <input type="hidden" name="_method" value="'edit"/>
+              <button>edit</button>
+            </form>
+          </td>
+        </tr>
     <% end %>
 </table>
 
-<form action="/speeds/<%= @speed.id %>/delete" method="post">
-  <input type="hidden" name="_method" value="'delete"/>
-  <button>delete</button>
-</form>
+
 
 <a href="/speeds/new">New Speed test</a>
-
-
-<%= @p %>
-<%= @s1 %>
-<%= @s2 %>
-<%= @s3 %>

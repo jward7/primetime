@@ -13,19 +13,19 @@ require_relative 'prime'
 require_relative 'speed'
 require_relative 'database'
 
+Database.clear_tables
+Database.seed
+
 before do
-  Database.clear_tables
-  Database.seed
 
   #@speeds = Speed.all    # todo keep dry by removing duplication below. Need to test after removing items below.
 end
 
 # root route
 get '/' do
-  @p = Prime.all.last.prime_c
-  @s1 = Speed.all.last.person
-  Speed.create speed_c: 77, person: 'Kevin'
-  @s2 = Speed.all.last.person
+  @prime= Prime.all
+  @speed = Speed.all
+  #Speed.create speed_c: 56, person: 'jw'
   #Speed.create speed_c: 66, person: 'Arnold', computer_c: 'Mac Book Pro'
   #@s3 = Speed.all.last.computer_c # todo here trying to get associate working
   #@s4 = Computer.speed.create()
@@ -44,7 +44,7 @@ end
 # the next two routes work as a pair to display a create new item and then submit the new item
 
 # new speed test  - part 1
-get 'speeds/new' do
+get '/speeds/new' do
   erb :new
 end
 
@@ -52,6 +52,7 @@ end
 post '/speeds' do
   speed = Speed.new
   speed.speed_c = params[:speed]
+  speed.person = params[:person]
   if speed.save
     redirect to '/'
   else
@@ -62,23 +63,24 @@ end
 # the next two routes work as a pair to display an edit form and submit edits
 
 # show edit form
-get 'speeds/:id/edit' do
-  @speeds = Speed.find(params[:id])      # get the first value. Find is specific. Where is flexible
+get '/speeds/:id/edit' do
+  @speed = Speed.find(params[:id])      # get the first value. Find is specific. Where is flexible
 
   erb :edit
 end
 
 # update existing speed test
-put 'speeds/:id' do
+put '/speeds/:id/edit' do
   edit_speed = Speed.find(params[:id])
   edit_speed.speed_c = params[:speed]
+  edit_speed.person = params[:person]
   edit_speed.save
 
   redirect to '/'
 end
 
 # delete existing speed test. Should work as an extension of edit, but with post button
-delete 'speeds/:id' do
+post '/speeds/:id/delete' do
   edit_speed = Speed.find(params[:id])
   edit_speed.delete    # only need to save when you are modifying the object.
 

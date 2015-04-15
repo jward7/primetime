@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="PostgreSQL - primetime@localhost" uuid="3c428209-5328-4d79-a952-467ab50924bd">
+      <secret-storage>master_key</secret-storage>
+      <user-name>postgres</user-name>
+      <schema-pattern>primetime.pg_catalog primetime.public</schema-pattern>
+      <default-schemas>primetime.pg_catalog primetime.public</default-schemas>
+    </data-source>
+  </component>
+</project>
