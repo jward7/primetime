@@ -19,7 +19,7 @@ request.send();
 console.log('AJAX request is probably still running')*/
 
 $(document).ready(function() {
-    $.getJSON('/api/students').done(function() {
+    $.getJSON('/api/speeds').done(function() {
         console.log('done');
     });
 });

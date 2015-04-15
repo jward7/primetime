@@ -1,3 +1,53 @@
 <h2>API usage and examples</h2>
 
 <p>This page uses the PRIMETIME API to access, create and delete records</p>
+
+<a href="/speeds/new">new speed test</a>
+
+<form id="new-speed-test-form" action="/posts" method="post">
+  <label for="">person</label>
+  <input type="text" id="person" value="">
+  <label for="">speed</label>
+  <input type="text" id="speed" value="">
+  <button>new post</button>
+</form>
+
+<button id="get_button" >get speed results via javascript and AJAX</button>
+
+<script>
+
+    var doMagic = function(){
+        $.ajax({
+            url: '/api/speeds',
+            dataType: 'json'
+        }).done(function(speeds){
+
+            for (var i=0; i<speeds.length; i++){
+                console.log(speeds[i].person);
+
+                var $newResult = $('<p>').html(speeds[i].person + ' ' + speeds[i].speed_c);
+                $('body').append($newResult);
+            }
+        });
+    };
+
+    $('#get_button').on('click', doMagic);
+
+
+    var createPost = function(event) {
+        event.preventDefault();
+
+        $.ajax({
+            url: '/api/speeds',
+            method: 'post',
+            data: { speed_c: $('#speed').val()}
+        }).done(function(returnedData){
+            $('body').append('<p>' + returnedData.title + '</p>')
+        }).fail(function(){
+            console.log('it didnt work');
+        });
+    };
+
+    $('#new-speed-test-form').on('submit', createPost)
+
+</script>
