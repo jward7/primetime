@@ -1,7 +1,6 @@
+/*
 <button>magic posts</button>
 
-<!--
-<script>
 var doMagic = function(){
     $.ajax({
         url: '/api/posts',
@@ -18,9 +17,6 @@ var doMagic = function(){
 };
 
 $('button').on('click', doMagic);
-</script>-->
-
-<script>
 
 var createPost = function(event) {
     event.preventDefault();
@@ -37,5 +33,4 @@ var createPost = function(event) {
 };
 
 $('#new-post-form').on('submit', createPost)
-
-</script>
+*/

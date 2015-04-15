@@ -87,6 +87,10 @@ post '/speeds/:id/delete' do
   redirect to '/'
 end
 
+get '/api/example' do
+  erb :api
+end
+
 # JSON API
 
 get '/api/speeds' do
