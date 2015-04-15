@@ -32,12 +32,16 @@ get '/' do
   @prime= Prime.all
   @speed = Speed.all
   @computer = Computer.all
-  @computer1 = @speed.computers.create(computer_c: 'Mac', manufacture_year: 2005)
+  #@computer1 = @speed.computers.create(computer_c: 'Mac', manufacture_year: 2005)
   #Speed.create speed_c: 56, person: 'jw'
   #Speed.create speed_c: 66, person: 'Arnold', computer_c: 'Mac Book Pro'
   #@s3 = Speed.all.last.computer_c # todo here trying to get associate working
   #@s4 = Computer.speed.create()
   erb :index
+end
+
+get '/cover' do
+  erb :cover, :layout => false
 end
 
 # make 5 RESTFUL routes
