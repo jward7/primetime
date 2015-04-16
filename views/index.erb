@@ -6,7 +6,7 @@
     </tr>
     <% @speed.each do |s| %>
         <tr>
-          <td><%= s.person %></td><td><%= s.computer_id %></td><td><%= s.speed_c  %></td>
+          <td><%= s.person %></td><td><%= s.id %></td><td><%= s.speed_c  %></td>
           <td>
             <form action="/speeds/<%= s.id %>/delete" method="post">
                 <input type="hidden" name="_method" value="'delete"/>

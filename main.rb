@@ -21,11 +21,9 @@ before do
   #@speeds = Speed.all    # todo keep dry by removing duplication below. Need to test after removing items below.
 end
 
-=begin
 after do # after is a sinatra request after every route.
   ActiveRecord::Base.connection.close
 end
-=end
 
 # root route
 get '/' do
@@ -42,6 +40,10 @@ end
 
 get '/cover' do
   erb :cover, :layout => false
+end
+
+get '/about' do
+  erb :about, :layout => false
 end
 
 # make 5 RESTFUL routes

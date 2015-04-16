@@ -48,20 +48,22 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="/cover">Cover Page</a></li>
+            <li><a href="/about">About</a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Quick Nav <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
+                <li class="dropdown-header">Computer benchmarking</li>
+                <li><a href="#">Speed test (individual)</a></li>
+                <li><a href="#">Speed Race (group) </a></li>
+                <li><a href="#">API</a></li>
                 <li class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
+                <li class="dropdown-header">Prime numbers</li>
+                <li><a href="#">Calculate prime numbers</a></li>
+                <li><a href="#">Prime number database</a></li>
               </ul>
             </li>
+            <li class="text-right" ><a href="/login">Login</a></li>
           </ul>
         </div>
       </div>
@@ -133,26 +135,26 @@
   <div class="row">
     <div class="col-lg-4">
       <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-      <h2>Heading</h2>
-      <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+      <h2>Speed Test (individual)</h2>
+      <p>Benchmark your computer speed using javascript and ruby. Use Google Octane to benchmark the speed of your browser implementation of javascript. Alternatively calculate large prime numbers as the benchmark test.</p>
       <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
     </div><!-- /.col-lg-4 -->
     <div class="col-lg-4">
       <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-      <h2>Heading</h2>
-      <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+      <h2>Speed Race (group)</h2>
+      <p>Log in to organise a group race. Uses Google Octane or large prime number calculations. Watch the race via a chart and see the results real time.</p>
       <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
     </div><!-- /.col-lg-4 -->
     <div class="col-lg-4">
       <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-      <h2>Heading</h2>
-      <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+      <h2>API</h2>
+      <p>Access the P R I M E T I M E database via an API. Embed a benchmarking database on your own site. The API also includes prime number information.</p>
       <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
     </div><!-- /.col-lg-4 -->
   </div><!-- /.row -->
 
 
-  <!-- START THE FEATURETTES -->
+<!--  &lt;!&ndash; START THE FEATURETTES &ndash;&gt;
 
   <hr class="featurette-divider">
 
@@ -190,19 +192,19 @@
     </div>
   </div>
 
-  <hr class="featurette-divider">
+  <hr class="featurette-divider">-->
 
   <!-- /END THE FEATURETTES -->
 
+  <%= yield %>
 
   <!-- FOOTER -->
   <footer>
     <p class="pull-right"><a href="#">Back to top</a></p>
-    <p>&copy; 2014 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+    <p>&copy; 2015 Modern Mag, Pty Ltd. &middot;</p>
   </footer>
 
 </div><!-- /.container -->
 
-    <%= yield %>
 </body>
 </html>

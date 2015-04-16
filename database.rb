@@ -28,5 +28,25 @@ class Database
     Prime.create prime_c: 9, prime_text: '9', type_of: 'unknown' # no timestamp
     Prime.create prime_c: 11, prime_text: '11', type_of: 'unknown' # no timestamp
     Prime.create prime_c: 13, prime_text: '13', type_of: 'unknown' # no timestamp
+
+=begin
+    # attempt at linking tables
+    c1 = Computer.create computer_c: 'mac'
+    c2 = Computer.create computer_c: 'pc'
+
+    s1 = Speed.create :person => 'Apple Fanboy', computer_id: c1.id  # belongs to
+    s2 = Speed.create :person => 'PC kid', computer_id: c2.id
+    s1.save
+    s2.save
+=end
+
+=begin
+    c1 = Computer.create name: 'mac'
+    Computer.create name: 'pc'
+
+    s1 = Speed.create :name => 'sdsdf', computer_id: c1.id  # belongs to
+    s2 = Speed.create :name => 'sdsdf',
+=end
+
   end
 end
