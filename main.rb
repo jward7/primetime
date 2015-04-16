@@ -64,7 +64,7 @@ end
 # new speed test -part 2 todo not tested yet.
 post '/speeds' do
   speed = Speed.new
-  speed.speed_c = params[:speed]
+  speed.result = params[:speed]
   speed.person = params[:person]
   if speed.save
     redirect to '/'
@@ -85,7 +85,7 @@ end
 # update existing speed test
 put '/speeds/:id/edit' do
   edit_speed = Speed.find(params[:id])
-  edit_speed.speed_c = params[:speed]
+  edit_speed.result = params[:speed]
   edit_speed.person = params[:person]
   edit_speed.save
 
@@ -114,7 +114,7 @@ end
 post '/api/speeds' do
   speed = Speed.new
   speed.person  = params[:person]
-  speed.speed_c = params[:result]
+  speed.result = params[:result]
   speed.save
 
   content_type :json

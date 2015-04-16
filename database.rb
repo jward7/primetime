@@ -8,31 +8,31 @@ class Database
 
   def self.seed
     # seed database tables
-    Speed.create person: 'Justin', speed_c: 300
-    Speed.create person: 'Bob', speed_c: 500
-    Speed.create person: 'Bill', speed_c: 10
-    Speed.create person: 'Eden', speed_c: 60
-    Speed.create person: 'Jane', speed_c: 700
-    Speed.create person: 'Jill', speed_c: 3000
+    Speed.create person: 'Justin', result: 300
+    Speed.create person: 'Bob', result: 500
+    Speed.create person: 'Bill', result: 10
+    Speed.create person: 'Eden', result: 60
+    Speed.create person: 'Jane', result: 700
+    Speed.create person: 'Jill', result: 3000
 
-    Computer.create computer_c: 'Windows', manufacture_year: 2006
-    Computer.create computer_c: 'Windows', manufacture_year: 2014
-    Computer.create computer_c: 'MacBook Pro', manufacture_year: 2013
-    Computer.create computer_c: 'MacBook Air', manufacture_year: 2012
-    Computer.create computer_c: 'MacBook Pro', manufacture_year: 2011
-    Computer.create computer_c: 'Windows', manufacture_year: 2015
+    Computer.create make: 'Windows', manufacture_year: 2006
+    Computer.create make: 'Windows', manufacture_year: 2014
+    Computer.create make: 'MacBook Pro', manufacture_year: 2013
+    Computer.create make: 'MacBook Air', manufacture_year: 2012
+    Computer.create make: 'MacBook Pro', manufacture_year: 2011
+    Computer.create make: 'Windows', manufacture_year: 2015
 
-    Prime.create prime_c: 3, prime_text: '3', type_of: 'unknown' # no timestamp
-    Prime.create prime_c: 5, prime_text: '5', type_of: 'unknown' # no timestamp
-    Prime.create prime_c: 7, prime_text: '7', type_of: 'unknown' # no timestamp
-    Prime.create prime_c: 9, prime_text: '9', type_of: 'unknown' # no timestamp
-    Prime.create prime_c: 11, prime_text: '11', type_of: 'unknown' # no timestamp
-    Prime.create prime_c: 13, prime_text: '13', type_of: 'unknown' # no timestamp
+    Prime.create num: 3, txt: '3', type_of: 'unknown' # no timestamp
+    Prime.create num: 5, txt: '5', type_of: 'unknown' # no timestamp
+    Prime.create num: 7, txt: '7', type_of: 'unknown' # no timestamp
+    Prime.create num: 9, txt: '9', type_of: 'unknown' # no timestamp
+    Prime.create num: 11, txt: '11', type_of: 'unknown' # no timestamp
+    Prime.create num: 13, txt: '13', type_of: 'unknown' # no timestamp
 
 =begin
     # attempt at linking tables
-    c1 = Computer.create computer_c: 'mac'
-    c2 = Computer.create computer_c: 'pc'
+    c1 = Computer.create make: 'mac'
+    c2 = Computer.create make: 'pc'
 
     s1 = Speed.create :person => 'Apple Fanboy', computer_id: c1.id  # belongs to
     s2 = Speed.create :person => 'PC kid', computer_id: c2.id

@@ -16,7 +16,7 @@
 
 <script>
 
-    var doMagic = function(){
+    var apiGetResults = function(){
         $.ajax({
             url: '/api/speeds',
             dataType: 'json'
@@ -25,29 +25,29 @@
             for (var i=0; i<speeds.length; i++){
                 console.log(speeds[i].person);
 
-                var $newResult = $('<p>').html(speeds[i].person + ' ' + speeds[i].speed_c);
+                var $newResult = $('<p>').html(speeds[i].person + ' ' + speeds[i].result);
                 $('body').append($newResult);
             }
         });
     };
 
-    $('#get_button').on('click', doMagic);
+    $('#get_button').on('click', apiGetResults);
 
 
-    var createPost = function(event) {
+    var apiSaveResults = function(event) {
         event.preventDefault();
 
         $.ajax({
             url: '/api/speeds',
             method: 'post',
-            data: { speed_c: $('#speed').val()}
+            data: { person: $('#person').val(), result: $('#speed').val()}
         }).done(function(returnedData){
-            $('body').append('<p>' + returnedData.title + '</p>')
+            $('body').append('<p>' + returnedData.person + ' ' + returnedData.result + '</p>')
         }).fail(function(){
             console.log('it didnt work');
         });
     };
 
-    $('#new-speed-test-form').on('submit', createPost)
+    $('#new-speed-test-form').on('submit', apiSaveResults)
 
 </script>
