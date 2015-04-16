@@ -1,11 +1,15 @@
 require 'active_record'
 
-ActiveRecord::Base.establish_connection(
+local_db = {
     :adapter => 'postgresql',
     :username => 'postgres',
     :password => 'postgres',
     :database => 'primetime'
-)
+}
+
+heroku_db_url = 'postgres://HEROKU_POSTGRESQL_MAROON_URL' # get this from a previous step in setting up heroku.
+#ActiveRecord::Base.establish_connection(heroku_db_url)
+ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'] || local_db)
 
 =begin
 Dish.create name: 'cake pudding'

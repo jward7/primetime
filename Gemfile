@@ -1,8 +1,11 @@
 source 'https://rubygems.org'
 
 gem 'sinatra'
-gem 'sinatra-reloader'
 gem 'pg' #for postgresql database
-gem 'pry'
 gem 'activerecord'
 gem 'sinatra-formhelpers-ng'
+
+group :development do
+  gem 'pry'
+  gem 'sinatra-reloader'
+end

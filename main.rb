@@ -1,8 +1,8 @@
 require 'sinatra'
-require 'sinatra/reloader'
+# require 'sinatra/reloader' if environment.development?
 require 'pg' #for postgresql database
-require 'pry'
-require 'sinatra/form_helpers'
+#require 'pry'
+#require 'sinatra/form_helpers'
 #require 'bcrypt'
 
 #enable :sessions
