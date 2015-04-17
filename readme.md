@@ -1,6 +1,6 @@
 # Primetime
 
-A Sinatra API app development using the following technologies:
+A Sinatra API app developed using the following technologies:
 
 * DT's sinatra generator
 * ActiveRecord (ORM)
