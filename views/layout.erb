@@ -17,6 +17,9 @@
   <!-- Custom styles for this template -->
   <link href="/stylesheets/carousel.css" rel="stylesheet">
 
+  <!--this overrides carousel CSS-->
+  <link href="/stylesheets/main.css" rel="stylesheet">
+
   <!-- Bootstrap core JavaScript
 ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
@@ -128,7 +131,7 @@
 <!-- Marketing messaging and featurettes
 ================================================== -->
 <!-- Wrap the rest of the page in another container to center all the content. -->
-
+<div class="dwave">
 <div class="container marketing">
 
   <!-- Three columns of text below the carousel -->
@@ -137,66 +140,40 @@
       <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
       <h2>Speed Test (individual)</h2>
       <p>Benchmark your computer speed using javascript and ruby. Use Google Octane to benchmark the speed of your browser implementation of javascript. Alternatively calculate large prime numbers as the benchmark test.</p>
-      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+      <p><a class="btn btn-default" href="#" role="button">Run a speed test &raquo;</a></p>
     </div><!-- /.col-lg-4 -->
     <div class="col-lg-4">
       <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
       <h2>Speed Race (group)</h2>
       <p>Log in to organise a group race. Uses Google Octane or large prime number calculations. Watch the race via a chart and see the results real time.</p>
-      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+      <p><a class="btn btn-default" href="#" role="button">Group race &raquo;</a></p>
     </div><!-- /.col-lg-4 -->
     <div class="col-lg-4">
       <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
       <h2>API</h2>
       <p>Access the P R I M E T I M E database via an API. Embed a benchmarking database on your own site. The API also includes prime number information.</p>
-      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+      <p><a class="btn btn-default" href="#" role="button">API info &raquo;</a></p>
     </div><!-- /.col-lg-4 -->
   </div><!-- /.row -->
 
 
-<!--  &lt;!&ndash; START THE FEATURETTES &ndash;&gt;
+  <!-- START THE FEATURETTES -->
 
   <hr class="featurette-divider">
 
   <div class="row featurette">
     <div class="col-md-7">
-      <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-      <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+      <h2 class="featurette-heading">Benchmarking results</h2>
+      <p class="lead">The table (right) shows the benchmarking results obtained using</p><p class="lead">P R I M E T I M E</p>
     </div>
     <div class="col-md-5">
-      <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+      <%= yield %>
     </div>
   </div>
 
   <hr class="featurette-divider">
 
-  <div class="row featurette">
-    <div class="col-md-7 col-md-push-5">
-      <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-      <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-    </div>
-    <div class="col-md-5 col-md-pull-7">
-      <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-    </div>
-  </div>
-
-  <hr class="featurette-divider">
-
-  <div class="row featurette">
-    <div class="col-md-7">
-      <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-      <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-    </div>
-    <div class="col-md-5">
-      <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-    </div>
-  </div>
-
-  <hr class="featurette-divider">-->
-
-  <!-- /END THE FEATURETTES -->
-
-  <%= yield %>
+   <!--END THE FEATURETTES-->
 
   <!-- FOOTER -->
   <footer>
@@ -205,6 +182,7 @@
   </footer>
 
 </div><!-- /.container -->
+</div>
 
 </body>
 </html>

@@ -3,11 +3,11 @@ require 'active_record'
 local_db = {
     :adapter => 'postgresql',
     :username => 'postgres',
-    :password => 'postgres',
+    :password => 'drexler69',
     :database => 'primetime'
 }
 
-heroku_db_url = 'postgres://HEROKU_POSTGRESQL_MAROON_URL' # get this from a previous step in setting up heroku.
+#heroku_db_url = 'postgres://HEROKU_POSTGRESQL_MAROON_URL' # get this from a previous step in setting up heroku.
 #ActiveRecord::Base.establish_connection(heroku_db_url)
 ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'] || local_db)
 

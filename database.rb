@@ -8,12 +8,12 @@ class Database
 
   def self.seed
     # seed database tables
-    Speed.create person: 'Justin', result: 300
-    Speed.create person: 'Bob', result: 500
-    Speed.create person: 'Bill', result: 10
-    Speed.create person: 'Eden', result: 60
-    Speed.create person: 'Jane', result: 700
-    Speed.create person: 'Jill', result: 3000
+    Speed.create person: 'Jane', result: 999
+    Speed.create person: 'Bob', result: 800
+    Speed.create person: 'Bill', result: 700
+    Speed.create person: 'Eden', result: 600
+    Speed.create person: 'Justin', result: 500
+    Speed.create person: 'Jill', result: 400
 
     Computer.create make: 'Windows', manufacture_year: 2006
     Computer.create make: 'Windows', manufacture_year: 2014

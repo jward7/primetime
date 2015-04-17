@@ -1,7 +1,38 @@
-html {
-    background: url(/assets/quantum_computer.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+.dwave {
+    background: url("/assets/quantum_computer.jpg") no-repeat center center fixed;
+    opacity: 1.0;
+}
+
+.carousel {
+    margin-bottom: 10px;
+}
+
+.row {
+    margin-top: 45px;
+}
+
+tr.border_bottom td {
+    border-bottom:1pt solid white;
+}
+
+th, td {
+    padding: 10px;
+}
+
+.input{
+    display: table-row;
+}
+
+label{
+    padding-top: 10px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.lpad {
+    margin-left: 30px;
+}
+
+.ajax{
+    margin-top: 30px;
 }

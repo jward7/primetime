@@ -1,29 +1,25 @@
-<h2>Top 5</h2>
-
 <table>
-    <tr>
-        <td>NAME</td><td>COMPUTER</td><td>SPEED</td>
+    <tr class="bold">
+        <td><b>NAME</b></td><td><b>COMPUTER</b></td><td><b>SPEED</b></td>
     </tr>
     <% @speed.each do |s| %>
-        <tr>
+        <tr class="border_bottom">
           <td><%= s.person %></td><td><%= s.id %></td><td><%= s.result  %></td>
           <td>
             <form action="/speeds/<%= s.id %>/delete" method="post">
                 <input type="hidden" name="_method" value="'delete"/>
-                <button>delete</button>
+              <button class="btn btn-default">delete</button>
             </form>
           </td>
           <td>
             <form action="/speeds/<%= s.id %>/edit" method="put">
               <input type="hidden" name="_method" value="'edit"/>
-              <button>edit</button>
+              <button class="btn btn-default">edit</button>
             </form>
           </td>
         </tr>
     <% end %>
+    <tr>
+      <td><a href="/api/example">API example</a></td><td></td><td></td><td></td><td><a href="/speeds/new">New</a></td>
+    </tr>
 </table>
-
-
-
-<a href="/speeds/new">New Speed test</a>
-<a href="/api/example">API example</a>
