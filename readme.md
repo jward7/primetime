@@ -1,9 +1,9 @@
-h1 Primetime
+# Primetime
 
 A Sinatra API app development using the following technologies:
 
--DT's sinatra generator
--ActiveRecord (ORM)
--AJAX
--JSON
--Bootstrap
+* DT's sinatra generator
+* ActiveRecord (ORM)
+* AJAX
+* JSON
+* Bootstrap
