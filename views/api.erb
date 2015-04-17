@@ -1,18 +1,25 @@
-<h2>API usage and examples</h2>
+<div class="row featurette">
+  <div class="col-md-7">
+    <h2 class="featurette-heading">Application Programming Interface</h2>
+    <p class="lead">Examples of how to access the P R I M E T I M E database.</p>
+  </div>
+  <div class="col-md-5">
 
-<p>This page uses the P R I M E T I M E API to access, create and delete records</p>
+    <h2>API usage and examples</h2>
 
-<a href="/speeds/new">new speed test</a>
+    <p>This page uses the P R I M E T I M E API to access, create and delete records. Request and send results to /api/speeds/ as a hash {url: '/api/speeds', method: 'post', data: { person: 'name', result: 'result'}</p>
 
-<form id="new-speed-test-form" action="/posts" method="post">
-  <label for="">person</label>
-  <input type="text" id="person" value="">
-  <label for="">speed</label>
-  <input type="text" id="speed" value="">
-  <button class="lpad btn btn-default">new post</button>
-</form>
+    <form id="new-speed-test-form" action="/posts" method="post">
+      <label for="">person</label>
+      <input type="text" id="person" value="">
+      <label for="">speed</label>
+      <input type="text" id="speed" value="">
+      <button class="lpad btn btn-default">new post</button>
+    </form>
 
-<button class="ajax btn btn-default" id="get_button" >get speed results via javascript and AJAX</button>
+    <button class="ajax btn btn-default" id="get_button" >get speed results via javascript, AJAX and JSON</button>
+  </div>
+</div>
 
 <script>
 

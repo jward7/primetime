@@ -1,10 +1,19 @@
-<h2>Edit Speed Test</h2>
+<div class="row featurette">
+  <div class="col-md-7">
+    <h2 class="featurette-heading">Benchmarking results</h2>
+    <p class="lead">Edit the benchmarking results:</p>
+  </div>
+  <div class="col-md-5">
 
-<form action="/speeds/<%= @speed.id %>/edit" method="post">
-  <input type="hidden" name="_method" value="put"/>
-  <label for="">name</label>
-  <input type="text" name="person" value="<%= @speed.person %>"/>
-  <label for="">speed</label>
-  <input type="text" name="speed" value="<%= @speed.result %>"/>
-  <button class="lpad btn btn-default">update</button>
-</form>
+    <h2>Edit Speed Test</h2>
+
+    <form action="/speeds/<%= @speed.id %>/edit" method="post">
+      <input type="hidden" name="_method" value="put"/>
+      <label for="">name</label>
+      <input type="text" name="person" value="<%= @speed.person %>"/>
+      <label for="">speed</label>
+      <input type="text" name="speed" value="<%= @speed.result %>"/>
+      <button class="lpad btn btn-default">update</button>
+    </form>
+  </div>
+</div>

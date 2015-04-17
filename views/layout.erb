@@ -59,7 +59,7 @@
                 <li class="dropdown-header">Computer benchmarking</li>
                 <li><a href="#">Speed test (individual)</a></li>
                 <li><a href="#">Speed Race (group) </a></li>
-                <li><a href="#">API</a></li>
+                <li><a href="/api/example">API</a></li>
                 <li class="divider"></li>
                 <li class="dropdown-header">Prime numbers</li>
                 <li><a href="#">Calculate prime numbers</a></li>
@@ -112,7 +112,7 @@
         <div class="carousel-caption">
           <h1>Access our HUGE 3 record API from your own pages.</h1>
           <p>Got the fastest water cooled and overclocked rig around? Prove it right here and get a P R I M E T I M E certified speed.</p>
-          <p><a class="btn btn-lg btn-primary" href="#" role="button">API info</a></p>
+          <p><a class="btn btn-lg btn-primary" href="/api/example" role="button">API info</a></p>
         </div>
       </div>
     </div>
@@ -152,7 +152,7 @@
       <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
       <h2>API</h2>
       <p>Access the P R I M E T I M E database via an API. Embed a benchmarking database on your own site. The API also includes prime number information.</p>
-      <p><a class="btn btn-default" href="#" role="button">API info &raquo;</a></p>
+      <p><a class="btn btn-default" href="/api/example" role="button">API info &raquo;</a></p>
     </div><!-- /.col-lg-4 -->
   </div><!-- /.row -->
 
@@ -161,15 +161,7 @@
 
   <hr class="featurette-divider">
 
-  <div class="row featurette">
-    <div class="col-md-7">
-      <h2 class="featurette-heading">Benchmarking results</h2>
-      <p class="lead">The table (right) shows the benchmarking results obtained using</p><p class="lead">P R I M E T I M E</p>
-    </div>
-    <div class="col-md-5">
-      <%= yield %>
-    </div>
-  </div>
+    <%= yield %>
 
   <hr class="featurette-divider">
 

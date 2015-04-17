@@ -1,25 +1,35 @@
-<table>
-    <tr class="bold">
-        <td><b>NAME</b></td><td><b>COMPUTER</b></td><td><b>SPEED</b></td>
-    </tr>
-    <% @speed.each do |s| %>
-        <tr class="border_bottom">
-          <td><%= s.person %></td><td><%= s.id %></td><td><%= s.result  %></td>
-          <td>
-            <form action="/speeds/<%= s.id %>/delete" method="post">
-                <input type="hidden" name="_method" value="'delete"/>
-              <button class="btn btn-default">delete</button>
-            </form>
-          </td>
-          <td>
-            <form action="/speeds/<%= s.id %>/edit" method="put">
-              <input type="hidden" name="_method" value="'edit"/>
-              <button class="btn btn-default">edit</button>
-            </form>
-          </td>
+<div class="row featurette">
+  <div class="col-md-7">
+    <h2 class="featurette-heading">Benchmarking results</h2>
+    <p class="lead">The table (right) shows the benchmarking results obtained using</p><p class="lead">P R I M E T I M E</p>
+  </div>
+  <div class="col-md-5">
+
+    <table>
+        <tr class="bold">
+            <td><b>NAME</b></td><td><b>COMPUTER</b></td><td><b>SPEED</b></td>
         </tr>
-    <% end %>
-    <tr>
-      <td><a href="/api/example">API example</a></td><td></td><td></td><td></td><td><a href="/speeds/new">New</a></td>
-    </tr>
-</table>
+        <% @speed.each do |s| %>
+            <tr class="border_bottom">
+              <td><%= s.person %></td><td><%= s.id %></td><td><%= s.result  %></td>
+              <td>
+                <form action="/speeds/<%= s.id %>/delete" method="post">
+                    <input type="hidden" name="_method" value="'delete"/>
+                  <button class="btn btn-default">delete</button>
+                </form>
+              </td>
+              <td>
+                <form action="/speeds/<%= s.id %>/edit" method="put">
+                  <input type="hidden" name="_method" value="'edit"/>
+                  <button class="btn btn-default">edit</button>
+                </form>
+              </td>
+            </tr>
+        <% end %>
+        <tr>
+          <td><a href="/api/example">API example</a></td><td></td><td></td><td></td><td><a href="/speeds/new">New</a></td>
+        </tr>
+    </table>
+
+  </div>
+</div>
